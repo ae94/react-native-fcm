@@ -26,7 +26,7 @@ public class FIRLocalMessagingHelper {
     private Context mContext;
     private SharedPreferences sharedPreferences = null;
 
-    public FIRLocalMessagingHelper(Application context) {
+    public FIRLocalMessagingHelper(Context context) {
         mContext = context;
         sharedPreferences = (SharedPreferences) mContext.getSharedPreferences(PREFERENCES_KEY, Context.MODE_PRIVATE);
     }
