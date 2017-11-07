@@ -33,20 +33,13 @@ public class SendNotificationTask extends AsyncTask<Void, Void, Void> {
     private Bundle bundle;
     private SharedPreferences sharedPreferences;
     private Boolean mIsForeground;
-    private Intent mMainInent;
+    public static Intent mMainInent;
     
     public SendNotificationTask(Context context, SharedPreferences sharedPreferences, Boolean mIsForeground, Bundle bundle){
         this.mContext = context;
         this.bundle = bundle;
         this.sharedPreferences = sharedPreferences;
         this.mIsForeground = mIsForeground;
-    }
-    public SendNotificationTask(Context context, SharedPreferences sharedPreferences, Boolean mIsForeground, Bundle bundle, Intent mainIntent){
-        this.mContext = context;
-        this.bundle = bundle;
-        this.sharedPreferences = sharedPreferences;
-        this.mIsForeground = mIsForeground;
-        this.mMainInent = mainIntent;
     }
     
     protected Void doInBackground(Void... params) {
