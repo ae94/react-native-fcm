@@ -247,7 +247,7 @@ public class SendNotificationTask extends AsyncTask<Void, Void, Void> {
     
     public String getMainActivityClassName() {
         if (this.mMainInent != null) {
-            return this.mMainInent;
+            return this.mMainInent.getComponent().getClassName();
         }
         String packageName = mContext.getPackageName();
         Intent launchIntent = mContext.getPackageManager().getLaunchIntentForPackage(packageName);
